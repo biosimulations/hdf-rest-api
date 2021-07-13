@@ -34,8 +34,10 @@ tags:
     description: Operations involving Attributes.
 
 servers:
-  - url: http://hsdshdflab.hdfgroup.org
-    description: HSDS default server
+  - url: http://data.biosimulations.dev
+    description: Biosimulations development server
+  - url: http://data.biosimulations.org
+    description: Biosimulations prod server
 
 components:
   schemas:
