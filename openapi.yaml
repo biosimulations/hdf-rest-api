@@ -1,4 +1,4 @@
-openapi: "3.1.0"
+openapi: "3.0.0"
 info:
   title: BioSimulations Data Service
   description: RESTful application programming interface documentation for the Biosimulations Data Service, based on the HDF Scalable Data Service (HSDS) from the HDF Group.
@@ -33,9 +33,9 @@ tags:
     description: Operations involving Attributes.
 
 servers:
-  - url: http://data.biosimulations.dev
+  - url: https://data.biosimulations.dev
     description: Biosimulations development server
-  - url: http://data.biosimulations.org
+  - url: https://data.biosimulations.org
     description: Biosimulations prod server
 
 components:
@@ -1786,10 +1786,6 @@ paths:
         "200":
           description: OK
           content:
-            application/octet-stream:
-              schema:
-                type: string
-                format: binary
             application/json:
               schema:
                 type: object
@@ -1821,6 +1817,10 @@ paths:
                           [7, 21, 35, 49],
                           [8, 24, 40, 56],
                         ]
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
         default:
           description: Operation unsuccessful.
 
